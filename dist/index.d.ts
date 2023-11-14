@@ -3363,10 +3363,7 @@ declare class ComponentVideo extends ComponentImage {
 		traits: string[];
 		src: string;
 		fallback: string;
-		file: string; /**
-		 * Update traits by provider
-		 * @private
-		 */
+		file: string;
 		components?: ComponentDefinitionDefined | ComponentDefinitionDefined[] | undefined;
 	};
 	initialize(props: any, opts: any): void;
@@ -4695,6 +4692,7 @@ declare class CssRulesView extends View {
 	sortRules(a: number, b: number): number;
 	render(): this;
 }
+/** @private */
 export interface RuleOptions {
 	/**
 	 * At-rule type, eg. `media`
@@ -4705,6 +4703,7 @@ export interface RuleOptions {
 	 */
 	atRuleParams?: string;
 }
+/** @private */
 export interface SetRuleOptions extends RuleOptions {
 	/**
 	 * If the rule exists already, merge passed styles instead of replacing them.
