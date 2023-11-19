@@ -1,6 +1,7 @@
 const swv = 'sw-visibility';
 const expt = 'export-template';
 const osm = 'open-sm';
+const openMjmlBody = 'open-mjml-body';
 const otm = 'open-tm';
 const ola = 'open-layers';
 const obl = 'open-blocks';
@@ -100,6 +101,13 @@ const config: PanelsConfig = {
           id: obl,
           className: 'fa fa-th-large',
           command: obl,
+          togglable: false,
+          attributes: { title: 'Open Blocks' },
+        },
+        {
+          id: openMjmlBody,
+          className: 'fa fa-th-mjml-body',
+          command: openMjmlBody,
           togglable: false,
           attributes: { title: 'Open Blocks' },
         },

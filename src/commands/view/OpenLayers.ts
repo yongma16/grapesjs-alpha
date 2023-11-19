@@ -5,9 +5,13 @@ export default {
     const lm = editor.LayerManager;
     const pn = editor.Panels;
     const lmConfig = lm.getConfig();
+    console.log('lm', lm);
+    console.log('lmConfig', lmConfig);
+    console.log('lmConfig.appendTo', lmConfig.appendTo);
 
     if (lmConfig.appendTo) return;
 
+    console.log('this.layers', this.layers);
     if (!this.layers) {
       const id = 'views-container';
       const layers = document.createElement('div');

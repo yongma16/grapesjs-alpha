@@ -63,6 +63,7 @@ const commandsDef = [
   ['open-code', 'ExportTemplate', 'export-template'],
   ['open-layers', 'OpenLayers', 'open-layers'],
   ['open-styles', 'OpenStyleManager', 'open-sm'],
+  ['open-mjml-body', 'openMjmlBody', 'open-mjml-body'],
   ['open-traits', 'OpenTraitManager', 'open-tm'],
   ['open-blocks', 'OpenBlocks', 'open-blocks'],
   ['open-assets', 'OpenAssets', 'open-assets'],
