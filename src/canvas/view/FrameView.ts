@@ -340,6 +340,19 @@ export default class FrameView extends ModuleView<Frame, HTMLIFrameElement> {
 
     const colorWarn = '#ffca6f';
 
+    const textConfig = {
+      en: {
+        tipText: 'Drag here',
+        content: 'Template is empty. Drag over content from the toolbar on the right side.',
+      },
+      zh: {
+        tipText: '拖拽到这里',
+        content: '这里没有内容，从右侧拖拽内容。',
+      },
+    };
+
+    const tip = window.localStorage.getItem('localLanguage') === 'en-US' ? { ...textConfig.en } : { ...textConfig.zh };
+
     append(
       body,
       `<style>
@@ -361,7 +374,52 @@ export default class FrameView extends ModuleView<Frame, HTMLIFrameElement> {
       }
 
       .${ppfx}selected-parent {
-        outline: 2px solid ${colorWarn} !important
+        outline: 2px dotted #14CC97 !important;
+        background: rgba(243,252,250,.5);
+        border-top:5px solid#14CC97;
+        position:relative;
+      } 
+      
+
+      
+      .empty-column-box-tip {
+        outline: 2px dotted #14CC97 !important;
+        background: rgba(243,252,250,.5);
+        border-top:5px solid#14CC97;
+        position:relative;
+      } 
+      
+      .empty-column-box-tip:before{
+        content: '${tip.tipText}';
+        position: absolute;
+       
+        left: 50%;
+        transform: translateX(-50%);
+
+        font-size: 14px;
+        font-weight: 400;
+        border-radius: 20px;
+        color: #fff;
+        padding: 10px;
+        width: 95px;
+        height: 24px;
+        top:-24px;
+        text-align: center;
+        background: #14CC97;
+      }
+      
+      .empty-column-box-tip:after{
+        content: '${tip.content}';
+        position: absolute;
+        width: 200px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        font-size: 14px;
+        font-weight: 400;
+        border-radius: 20px;
+        color: #14CC97;
       }
 
       .${ppfx}no-select {
