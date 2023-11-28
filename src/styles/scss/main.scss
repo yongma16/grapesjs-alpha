@@ -36,6 +36,10 @@ $prefix: $app-prefix;
 
 @import "gjs_status";
 
+:focus-visible {
+  outline: 1px dashed #14CC97 !important;
+}
+
 $colorsAll: (one, $primaryColor),
   (two, $secondaryColor),
   (three, $tertiaryColor),
@@ -216,6 +220,8 @@ $colorsAll: (one, $primaryColor),
 .no-dots, .ui-resizable-handle{ border: none !important; margin:0 !important; outline: none !important; }
 
 .#{$com-prefix}dashed *{
+    padding-top: 20px;
+    padding-bottom: 20px;
 	outline: 1px dashed #888;
 	outline-offset: -2px;
   	box-sizing: border-box;

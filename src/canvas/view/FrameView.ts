@@ -380,13 +380,13 @@ export default class FrameView extends ModuleView<Frame, HTMLIFrameElement> {
         position:relative;
       } 
       
-
       
       .empty-column-box-tip {
         outline: 2px dotted #14CC97 !important;
         background: rgba(243,252,250,.5);
         border-top:5px solid#14CC97;
         position:relative;
+        min-height: 100px;
       } 
       
       .empty-column-box-tip:before{
