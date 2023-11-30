@@ -343,7 +343,7 @@ export default class FrameView extends ModuleView<Frame, HTMLIFrameElement> {
     const textConfig = {
       en: {
         tipText: 'Drag here',
-        content: 'Template is empty. Drag over content from the toolbar on the right side.',
+        content: 'Content is empty, drag over content from the right.',
       },
       zh: {
         tipText: '拖拽到这里',
@@ -357,6 +357,13 @@ export default class FrameView extends ModuleView<Frame, HTMLIFrameElement> {
       body,
       `<style>
       ${conf.baseCss || config.frameStyle || ''}
+      
+      .cke_editable:focus-visible {
+            outline: 1px dashed transparent;
+       }
+       td div:focus-visible {
+            outline: 1px dashed transparent;
+       }
 
       [data-gjs-type="wrapper"] {
         min-height: 100vh;
@@ -382,31 +389,11 @@ export default class FrameView extends ModuleView<Frame, HTMLIFrameElement> {
       
       
       .empty-column-box-tip {
-        outline: 2px dotted #14CC97 !important;
+        outline: 1px dotted #14CC97 !important;
         background: rgba(243,252,250,.5);
-        border-top:5px solid#14CC97;
         position:relative;
         min-height: 100px;
       } 
-      
-      .empty-column-box-tip:before{
-        content: '${tip.tipText}';
-        position: absolute;
-       
-        left: 50%;
-        transform: translateX(-50%);
-
-        font-size: 14px;
-        font-weight: 400;
-        border-radius: 20px;
-        color: #fff;
-        padding: 10px;
-        width: 95px;
-        height: 24px;
-        top:-24px;
-        text-align: center;
-        background: #14CC97;
-      }
       
       .empty-column-box-tip:after{
         content: '${tip.content}';
