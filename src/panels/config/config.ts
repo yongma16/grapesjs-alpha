@@ -41,34 +41,34 @@ const config: PanelsConfig = {
     {
       id: 'options',
       buttons: [
-        {
-          active: true,
-          id: swv,
-          className: 'fa fa-square-o',
-          command: 'core:component-outline',
-          context: swv,
-          attributes: { title: 'View components' },
-        },
-        {
-          id: prv,
-          className: 'fa fa-eye',
-          command: prv,
-          context: prv,
-          attributes: { title: 'Preview' },
-        },
-        {
-          id: ful,
-          className: 'fa fa-arrows-alt',
-          command: ful,
-          context: ful,
-          attributes: { title: 'Fullscreen' },
-        },
-        {
-          id: expt,
-          className: 'fa fa-code',
-          command: expt,
-          attributes: { title: 'View code' },
-        },
+        // {
+        //   active: true,
+        //   id: swv,
+        //   className: 'fa fa-square-o',
+        //   command: 'core:component-outline',
+        //   context: swv,
+        //   attributes: { title: 'View components' },
+        // },
+        // {
+        //   id: prv,
+        //   className: 'fa fa-eye',
+        //   command: prv,
+        //   context: prv,
+        //   attributes: { title: 'Preview' },
+        // },
+        // {
+        //   id: ful,
+        //   className: 'fa fa-arrows-alt',
+        //   command: ful,
+        //   context: ful,
+        //   attributes: { title: 'Fullscreen' },
+        // },
+        // {
+        //   id: expt,
+        //   className: 'fa fa-code',
+        //   command: expt,
+        //   attributes: { title: 'View code' },
+        // },
       ],
     },
     {

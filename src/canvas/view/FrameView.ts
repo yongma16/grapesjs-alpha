@@ -343,7 +343,7 @@ export default class FrameView extends ModuleView<Frame, HTMLIFrameElement> {
     const textConfig = {
       en: {
         tipText: 'Drag here',
-        content: 'Content is empty, drag over content from the right.',
+        content: 'Drag over content from the right',
       },
       zh: {
         tipText: '拖拽到这里',
@@ -393,12 +393,13 @@ export default class FrameView extends ModuleView<Frame, HTMLIFrameElement> {
         background: rgba(243,252,250,.5);
         position:relative;
         min-height: 100px;
-      } 
+        overflow: hidden;
+      }
       
       .empty-column-box-tip:after{
         content: '${tip.content}';
         position: absolute;
-        width: 200px;
+        max-width: 200px;
         top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
@@ -407,7 +408,7 @@ export default class FrameView extends ModuleView<Frame, HTMLIFrameElement> {
         font-weight: 400;
         border-radius: 20px;
         color: #14CC97;
-      }
+      } 
 
       .${ppfx}no-select {
         user-select: none;
