@@ -352,11 +352,23 @@ export default class FrameView extends ModuleView<Frame, HTMLIFrameElement> {
     };
 
     const tip = window.localStorage.getItem('localLanguage') === 'en-US' ? { ...textConfig.en } : { ...textConfig.zh };
+    // @ts-ignore
+    const { background, backgroundRepeat, backgroundSize } = window._mjmlConfig_ || {
+      background: '',
+      backgroundRepeat: '',
+      backgroundSize: '',
+    };
 
     append(
       body,
       `<style>
       ${conf.baseCss || config.frameStyle || ''}
+      body{
+        background-color:#ffffff !important;
+        background-image: ${background};
+        background-repeat: ${backgroundRepeat};
+        background-size: ${backgroundSize};
+      }
       
       .cke_editable:focus-visible {
             outline: 1px dashed transparent;
