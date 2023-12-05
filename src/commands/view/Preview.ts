@@ -63,7 +63,7 @@ export default {
     const canvasS = canvas.style;
     canvasS.width = '100%';
     canvasS.height = '100%';
-    canvasS.top = '0';
+    // canvasS.top = '0';
     canvasS.left = '0';
     canvasS.padding = '0';
     canvasS.margin = '0';
