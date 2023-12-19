@@ -262,7 +262,7 @@
   right: 10px;
   top: 3px;
   font-size: 10px;
-  color: $arrowColor;
+  color: #333333;
   cursor: pointer;
 }
 
@@ -277,13 +277,13 @@
   width: 0;
   border-left: 3px solid transparent;
   border-right: 4px solid transparent;
-  border-top: 4px solid $arrowColor;
+  border-top: 4px solid #666666;
   bottom: 4px;
   cursor: pointer;
 }
 
 .#{$app-prefix}field-arrow-u {
-  border-bottom: 4px solid $arrowColor;
+  border-bottom: 4px solid #666666;
   border-top: none;
   top: 4px;
 }

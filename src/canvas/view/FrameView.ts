@@ -399,9 +399,8 @@ export default class FrameView extends ModuleView<Frame, HTMLIFrameElement> {
         position:relative;
       } 
       
-      
       .empty-column-box-tip {
-        outline: 1px dotted #14CC97 !important;
+        border: 1px dotted #14CC97 !important;
         background: rgba(243,252,250,.5);
         position:relative;
         min-height: 100px;
@@ -420,7 +419,7 @@ export default class FrameView extends ModuleView<Frame, HTMLIFrameElement> {
         font-weight: 400;
         border-radius: 20px;
         color: #14CC97;
-      } 
+        } 
 
       .${ppfx}no-select {
         user-select: none;

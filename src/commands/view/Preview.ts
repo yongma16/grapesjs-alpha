@@ -58,7 +58,12 @@ export default {
 
     this.helper.style.display = 'inline-block';
 
-    panels.forEach((panel: any) => panel.set('visible', false));
+    panels.forEach((panel: any) => {
+      const { id } = panel.attributes;
+      if (id !== 'devices-c') {
+        panel.set('visible', false);
+      }
+    });
 
     const canvasS = canvas.style;
     canvasS.width = '100%';
